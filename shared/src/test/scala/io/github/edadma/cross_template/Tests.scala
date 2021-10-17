@@ -1,6 +1,5 @@
 package io.github.edadma.cross_template
 
-import org.scalatest._
 import org.scalatest.freespec.AnyFreeSpec
 import org.scalatest.matchers.should.Matchers
 
