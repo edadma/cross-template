@@ -17,7 +17,13 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform).
     githubRepository := name.value,
     mainClass := Some(s"${organization.value}.${name.value}.Main"),
     libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.10" % "test",
-    libraryDependencies += "io.github.edadma" %%% "cross-platform" % "0.1.1",
+    libraryDependencies ++= Seq(
+      "io.github.edadma" %%% "cross-platform" % "0.1.1"
+    ),
+    libraryDependencies ++= Seq(
+      "com.github.scopt" %%% "scopt" % "4.0.1",
+      "com.lihaoyi" %%% "pprint" % "0.6.6" % "test",
+    ),
     publishMavenStyle := true,
     Test / publishArtifact := false,
     licenses += "ISC" -> url("https://opensource.org/licenses/ISC")
