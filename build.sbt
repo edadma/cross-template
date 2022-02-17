@@ -16,7 +16,6 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
         "-language:implicitConversions",
         "-language:existentials",
         "-language:dynamics",
-        "-Xasync"
       ),
     organization := "io.github.edadma",
     githubOwner := "edadma",
