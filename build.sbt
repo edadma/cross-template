@@ -1,11 +1,13 @@
 ThisBuild / licenses += "ISC" -> url("https://opensource.org/licenses/ISC")
 ThisBuild / versionScheme := Some("semver-spec")
 
+publish / skip := true
+
 lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .in(file("."))
   .settings(
     name := "cross-template",
-    version := "0.1.0",
+    version := "0.0.1",
     scalaVersion := "3.1.3",
     scalacOptions ++=
       Seq(
@@ -27,7 +29,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
 //    ),
     libraryDependencies ++= Seq(
       "com.github.scopt" %%% "scopt" % "4.1.0",
-//      "com.lihaoyi" %%% "pprint" % "0.7.0" % "test",
+//      "com.lihaoyi" %%% "pprint" % "0.7.2" % "test",
     ),
     publishMavenStyle := true,
     Test / publishArtifact := false,
