@@ -1,6 +1,4 @@
 package io.github.edadma.cross_template
 
-object Main extends App {
-
-
-}
+@main def run(): Unit =
+  println("Hello world")
