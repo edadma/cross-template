@@ -22,8 +22,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     organization := "io.github.edadma",
     githubOwner := "edadma",
     githubRepository := name.value,
-    mainClass := Some(s"${organization.value}.${name.value}.Main"),
-//    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.14" % "test",
+//    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15" % "test",
 //    libraryDependencies ++= Seq(
 //      "io.github.edadma" %%% "cross-platform" % "0.1.1"
 //    ),
