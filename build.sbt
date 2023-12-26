@@ -8,7 +8,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .settings(
     name := "cross-template",
     version := "0.0.1",
-    scalaVersion := "3.2.2",
+    scalaVersion := "3.3.2",
     scalacOptions ++=
       Seq(
         "-deprecation",
@@ -22,9 +22,9 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     organization := "io.github.edadma",
     githubOwner := "edadma",
     githubRepository := name.value,
-//    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15" % "test",
+//    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17" % "test",
 //    libraryDependencies ++= Seq(
-//      "io.github.edadma" %%% "cross-platform" % "0.1.1"
+//      "io.github.edadma" %%% "cross-platform" % "0.1.5"
 //    ),
     libraryDependencies ++= Seq(
       "com.github.scopt" %%% "scopt" % "4.1.0",
