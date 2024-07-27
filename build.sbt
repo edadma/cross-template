@@ -8,7 +8,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .settings(
     name := "cross-template",
     version := "0.0.1",
-    scalaVersion := "3.4.0",
+    scalaVersion := "3.4.2",
     scalacOptions ++=
       Seq(
         "-deprecation",
@@ -22,13 +22,13 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     organization := "io.github.edadma",
     githubOwner := "edadma",
     githubRepository := name.value,
-//    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17" % "test",
+//    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19" % "test",
 //    libraryDependencies ++= Seq(
 //      "io.github.edadma" %%% "cross-platform" % "0.1.5"
 //    ),
     libraryDependencies ++= Seq(
-      "com.github.scopt" %%% "scopt" % "4.1.0",
-//      "com.lihaoyi" %%% "pprint" % "0.8.1" % "test",
+//      "com.github.scopt" %%% "scopt" % "4.1.0",
+//      "com.lihaoyi" %%% "pprint" % "0.9.0" % "test",
     ),
     publishMavenStyle := true,
     Test / publishArtifact := false,
@@ -38,8 +38,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     libraryDependencies += "org.scala-js" %% "scalajs-stubs" % "1.1.0" % "provided",
   )
   .nativeSettings(
-    nativeLinkStubs := true,
-    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.5.0",
+    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
   )
   .jsSettings(
     jsEnv := new org.scalajs.jsenv.nodejs.NodeJSEnv(),
@@ -48,5 +47,5 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     Test / scalaJSUseMainModuleInitializer := false,
     Test / scalaJSUseTestModuleInitializer := true,
     scalaJSUseMainModuleInitializer := true,
-    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.5.0",
+    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
   )
