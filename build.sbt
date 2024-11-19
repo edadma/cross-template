@@ -49,3 +49,4 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     scalaJSUseMainModuleInitializer             := true,
     libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
   )
+  
