@@ -1,5 +1,6 @@
-ThisBuild / licenses += "ISC" -> url("https://opensource.org/licenses/ISC")
-ThisBuild / versionScheme     := Some("semver-spec")
+ThisBuild / licenses += "ISC"  -> url("https://opensource.org/licenses/ISC")
+ThisBuild / versionScheme      := Some("semver-spec")
+ThisBuild / evictionErrorLevel := Level.Warn
 
 publish / skip := true
 
@@ -49,4 +50,3 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     scalaJSUseMainModuleInitializer             := true,
     libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
   )
-  
