@@ -9,7 +9,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .settings(
     name         := "cross-template",
     version      := "0.0.1",
-    scalaVersion := "3.5.2",
+    scalaVersion := "3.6.2",
     scalacOptions ++=
       Seq(
         "-deprecation",
