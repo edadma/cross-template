@@ -88,3 +88,11 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     scalaJSUseMainModuleInitializer             := true,
     libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
   )
+
+lazy val root = project
+  .in(file("."))
+  .aggregate(cross_template.js, cross_template.jvm, cross_template.native)
+  .settings(
+    publish / skip      := true,
+    publishLocal / skip := true,
+  )
