@@ -35,7 +35,7 @@ ThisBuild / developers := List(
 ThisBuild / homepage := Some(url("https://github.com/edadma/cross_template"))
 
 ThisBuild / pomIncludeRepository := { _ => false }
-ThisBuild / publishTo := {
+ThisBuild / publishTo            := {
   val nexus = "https://s01.oss.sonatype.org/"
   if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
@@ -93,6 +93,7 @@ lazy val root = project
   .in(file("."))
   .aggregate(cross_template.js, cross_template.jvm, cross_template.native)
   .settings(
+    name                := "cross_template",
     publish / skip      := true,
     publishLocal / skip := true,
   )
