@@ -11,8 +11,8 @@ ThisBuild / sonatypeRepository     := "https://s01.oss.sonatype.org/service/loca
 
 ThisBuild / publishConfiguration := publishConfiguration.value.withOverwrite(true).withChecksums(Vector.empty)
 ThisBuild / resolvers += Resolver.mavenLocal
-//ThisBuild / resolvers ++= Resolver.sonatypeOssRepos("snapshots") ++ Resolver.sonatypeOssRepos("releases")
 ThisBuild / resolvers += Resolver.sonatypeCentralSnapshots
+ThisBuild / resolvers += Resolver.sonatypeCentralRepo("releases")
 
 ThisBuild / sonatypeProfileName := "io.github.edadma"
 
