@@ -35,7 +35,7 @@ ThisBuild / homepage := Some(url("https://github.com/edadma/cross_template"))
 ThisBuild / publishTo := {
   val centralSnapshots = "https://central.sonatype.com/repository/maven-snapshots/"
   if (isSnapshot.value) Some("central-snapshots" at centralSnapshots)
-  else localStaging.value // ← This is the key difference!
+  else localStaging.value
 }
 
 lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
