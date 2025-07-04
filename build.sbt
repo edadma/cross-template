@@ -62,7 +62,6 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     ),
     publishMavenStyle      := true,
     Test / publishArtifact := false,
-    licenses += "ISC"      -> url("https://opensource.org/licenses/ISC"),
   )
   .jvmSettings(
     libraryDependencies += "org.scala-js" %% "scalajs-stubs" % "1.1.0" % "provided",
