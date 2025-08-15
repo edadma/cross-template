@@ -54,11 +54,11 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
       ),
 //    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19" % "test",
 //    libraryDependencies ++= Seq(
-//      "io.github.edadma" %%% "cross-platform" % "0.0.4"
+//      "io.github.edadma" %%% "cross_platform" % "0.0.14"
 //    ),
     libraryDependencies ++= Seq(
 //      "com.github.scopt" %%% "scopt" % "4.1.0",
-//      "com.lihaoyi" %%% "pprint" % "0.9.0" % "test",
+//      "com.lihaoyi" %%% "pprint" % "0.9.3" % "test",
     ),
     publishMavenStyle      := true,
     Test / publishArtifact := false,
