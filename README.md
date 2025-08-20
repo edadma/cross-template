@@ -1,7 +1,11 @@
 # cross_template
 
-[![Scala 3.7.2](https://img.shields.io/badge/Scala-3.7.2-red.svg)](https://scala-lang.org/)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.edadma/cross_template_sjs1_3)
+[![Last Commit](https://img.shields.io/github/last-commit/edadma/cross_template)](https://github.com/edadma/cross_template/commits)
+![GitHub](https://img.shields.io/github/license/edadma/cross_template)
+![Scala Version](https://img.shields.io/badge/Scala-3.7.2-blue.svg)
+![ScalaJS Version](https://img.shields.io/badge/Scala.js-1.19.0-blue.svg)
+![Scala Native Version](https://img.shields.io/badge/Scala_Native-0.5.8-blue.svg)
 
 A Scala 3 cross-platform project template that compiles to JVM, JavaScript (Scala.js), and Native (Scala Native) targets.
 
