@@ -38,6 +38,8 @@ ThisBuild / publishTo := {
   else localStaging.value
 }
 
+ThisBuild / publishMavenStyle := true
+
 lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .in(file("."))
   .settings(
@@ -60,7 +62,6 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
 //      "com.github.scopt" %%% "scopt" % "4.1.0",
 //      "com.lihaoyi" %%% "pprint" % "0.9.3" % "test",
     ),
-    publishMavenStyle      := true,
     Test / publishArtifact := false,
   )
   .jvmSettings(
