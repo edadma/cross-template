@@ -1,3 +1,5 @@
+import xerial.sbt.Sonatype.sonatypeCentralHost
+
 ThisBuild / licenses               := Seq("ISC" -> url("https://opensource.org/licenses/ISC"))
 ThisBuild / versionScheme          := Some("semver-spec")
 ThisBuild / evictionErrorLevel     := Level.Warn
@@ -6,7 +8,7 @@ ThisBuild / organization           := "io.github.edadma"
 ThisBuild / organizationName       := "edadma"
 ThisBuild / organizationHomepage   := Some(url("https://github.com/edadma"))
 ThisBuild / version                := "0.0.1"
-ThisBuild / sonatypeCredentialHost := "central.sonatype.com"
+ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
 
 ThisBuild / publishConfiguration := publishConfiguration.value.withOverwrite(true).withChecksums(Vector.empty)
 ThisBuild / resolvers += Resolver.mavenLocal
@@ -31,14 +33,9 @@ ThisBuild / developers := List(
 )
 
 ThisBuild / homepage := Some(url("https://github.com/edadma/cross_template"))
+ThisBuild / description := "Project description here"
 
-ThisBuild / publishTo := {
-  val centralSnapshots = "https://central.sonatype.com/repository/maven-snapshots/"
-  if (isSnapshot.value) Some("central-snapshots" at centralSnapshots)
-  else localStaging.value
-}
-
-ThisBuild / publishMavenStyle := true
+ThisBuild / publishTo := sonatypePublishToBundle.value
 
 lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
   .in(file("."))
@@ -62,6 +59,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
 //      "com.github.scopt" %%% "scopt" % "4.1.0",
 //      "com.lihaoyi" %%% "pprint" % "0.9.6" % "test",
     ),
+    publishMavenStyle      := true,
     Test / publishArtifact := false,
   )
   .jvmSettings(
