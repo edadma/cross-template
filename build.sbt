@@ -66,7 +66,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     libraryDependencies += "org.scala-js" %% "scalajs-stubs" % "1.1.0" % "provided",
   )
   .nativeSettings(
-//    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
+//    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.7.0",
     libraryDependencies += "org.scala-js" %% "scalajs-stubs" % "1.1.0" % "provided",
   )
   .jsSettings(
@@ -79,7 +79,7 @@ lazy val cross_template = crossProject(JSPlatform, JVMPlatform, NativePlatform)
     Test / scalaJSUseMainModuleInitializer := false,
     Test / scalaJSUseTestModuleInitializer := true,
     scalaJSUseMainModuleInitializer        := true,
-//    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.6.0",
+//    libraryDependencies += "io.github.cquiroz" %%% "scala-java-time" % "2.7.0",
   )
 
 lazy val root = project
